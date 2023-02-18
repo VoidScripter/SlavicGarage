@@ -3,7 +3,7 @@ local Window = OrionLib:MakeWindow({Name = "The Slav's Garage", HidePremium = fa
 
 OrionLib:MakeNotification({
 	Name = "Thanks for using the slavic garage!",
-	Content = "If you want too, you could support us by using this link.",
+	Content = "If you want too, you could support us by using this link: https://link-hub.net/446268/the-slav-garage",
 	Time = 5
 })
 
