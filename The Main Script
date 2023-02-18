@@ -1,0 +1,13 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "The Slav's Garage", HidePremium = false, SaveConfig = true, ConfigFolder = "The Garage"})
+
+OrionLib:MakeNotification({
+	Name = "Thanks for using the slavic garage!",
+	Content = "If you want too, you could support us by using this link.",
+	Time = 5
+})
+
+local Tab = Window:MakeTab({
+	Name = "Legends Of Speed",
+	PremiumOnly = false
+})
