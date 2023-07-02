@@ -7,83 +7,12 @@
         \/           \/             \/          \/     \/           \//_____/      \/ 
 ]]--
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "The Slav's Garage", HidePremium = false, SaveConfig = true, ConfigFolder = "The Garage"})
 
 OrionLib:MakeNotification({
 	Name = "Thanks for using the slavic garage!",
-	Content = "If you want too, you could support us by using this link: https://link-hub.net/446268/the-slav-garage",
+	Content = "If you want to you could support us by using this link: https://link-hub.net/446268/the-slav-garage",
 	Time = 5
 })
 
@@ -375,11 +304,33 @@ Section5:AddButton({
 end
 })
 
--- clicker game or something
-
 local Tab1 = Window:MakeTab({
-	Name = "Tapping Simulator",
+	Name = "Ninja Legends",
 	PremiumOnly = false
+})
+
+local Tab1Section1 = Tab1:AddSection({
+	Name = "Farming"
+})
+
+Tab1Section1:AddToggle({
+	Name = "Auto Swing",
+	Default = false,
+	Callback = function(Value)
+		repeat game:GetService("Players").LocalPlayer:WaitForChild("ninjaEvent"):FireServer("swingKatana")
+		wait(0.3)
+		until Value == false
+	end    
+})
+
+Tab1Section1:AddToggle({
+	Name = "Auto Sell",
+	Default = false,
+	Callback = function(Value)
+		repeat firetouchinterest(workspace.sellAreaCircles.sellAreaCircle16.circleInner, game.Players.LocalPlayer.Character.HumanoidRootPart, 0)
+		wait(0.3)
+		until Value == false
+	end    
 })
 
 OrionLib:Init()
